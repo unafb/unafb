@@ -8,7 +8,7 @@ class Navigation extends Component {
       <Navbar className="navbar navbar-inverse navbar-fixed-top">
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#home">React-Bootstrap</a>
+          <a href="#home">UNAFB</a>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav className="nav navbar-nav">

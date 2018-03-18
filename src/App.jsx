@@ -7,7 +7,7 @@ class App extends Component {
     return (
       
       <div className="App">
-        <Navigation> </Navigation>
+        <Navigation/>
         <p>U need a f***ing budget</p>
       </div>
     );
