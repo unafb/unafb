@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 
 class Navigation extends Component {
-  render(){
-      return (
+  render() {
+    return (
       <Navbar className="navbar navbar-inverse">
         <Navbar.Header>
           <Navbar.Brand>
-            <NavLink exact activeClassName='active' to='/'>UNAFB</NavLink>
+            <NavLink exact activeClassName="active" to="/">UNAFB</NavLink>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav className="nav navbar-nav">
