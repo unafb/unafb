@@ -5,5 +5,5 @@ import MyBudget from './MyBudget';
 it('MyBudget page renders without crashing', () => {
   const myBudget = shallow(<MyBudget />);
 
-  expect(myBudget).toMatchSnapshot();
+  expect(myBudget.find('.MyBudget').exists()).toEqual(true);
 });

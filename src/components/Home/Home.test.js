@@ -5,5 +5,5 @@ import Home from './Home';
 it('Homepage renders without crashing', () => {
   const home = shallow(<Home />);
 
-  expect(home).toMatchSnapshot();
+  expect(home.find('.Home').exists()).toEqual(true);
 });

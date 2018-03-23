@@ -5,5 +5,5 @@ import Login from './Login';
 it('Login page renders without crashing', () => {
   const login = shallow(<Login />);
 
-  expect(login).toMatchSnapshot();
+  expect(login.find('.Login').exists()).toEqual(true);
 });

@@ -5,5 +5,5 @@ import Calendar from './Calendar';
 it('Calendar page renders without crashing', () => {
   const calendar = shallow(<Calendar />);
 
-  expect(calendar).toMatchSnapshot();
+  expect(calendar.find('.Calendar').exists()).toEqual(true);
 });
