@@ -1,11 +1,11 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import React, { Component } from 'react';
 import './App.css';
-import Navigation from './Navigation';
-import Home from './Home';
-import Login from './Login';
-import Calendar from './Calendar';
-import MyBudget from './MyBudget';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import Login from './components/Login';
+import Calendar from './components/Calendar';
+import MyBudget from './components/MyBudget';
 
 class App extends Component {
   render() {
@@ -18,9 +18,9 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/calendar" component={Calendar} />
             <Route exact path="/mybudget" component={MyBudget} />
-            <Route render={function notFound() {
-              return <p>Not Found</p>;
-            }}
+            <Route render={() =>
+              <p>Not Found</p>
+            }
             />
           </Switch>
         </div>
