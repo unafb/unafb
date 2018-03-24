@@ -1,12 +1,27 @@
+import { Router, Switch, Route } from 'react-router-dom';
 import React, { Component } from 'react';
+import history from './history';
 import './App.css';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import Login from './components/Login';
+import Calendar from './components/Calendar';
+import MyBudget from './components/MyBudget';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <p>U need a f***ing budget</p>
-      </div>
+      <Router history={history}>
+        <div className="App">
+          <Navigation />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/calendar" component={Calendar} />
+            <Route exact path="/mybudget" component={MyBudget} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
