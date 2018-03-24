@@ -1,5 +1,6 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import React, { Component } from 'react';
+import history from './history';
 import './App.css';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -10,7 +11,7 @@ import MyBudget from './components/MyBudget';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router history={history}>
         <div className="App">
           <Navigation />
           <Switch>
@@ -24,7 +25,7 @@ class App extends Component {
             />
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
