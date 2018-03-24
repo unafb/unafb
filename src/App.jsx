@@ -19,10 +19,6 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/calendar" component={Calendar} />
             <Route exact path="/mybudget" component={MyBudget} />
-            <Route render={() =>
-              <p>Not Found</p>
-            }
-            />
           </Switch>
         </div>
       </Router>
