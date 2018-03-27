@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, RadialChart } from 'react-vis';
 
 class Chart extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.renderXY = this.renderXY.bind(this);
     this.renderRadial = this.renderRadial.bind(this);
   }
+
   renderXY() {
     return (
       <XYPlot
@@ -43,6 +44,7 @@ class Chart extends Component {
         data={[{ angle: 1 }, { angle: 5 }, { angle: 2 }]}
         width={300}
         height={300}
+        radius={this.props.radius}
       />
     );
   }
@@ -51,10 +53,12 @@ class Chart extends Component {
   }
 }
 Chart.defaultProps = {
+  radius: 100,
   type: 'XY',
   color: 'Red',
 };
 Chart.propTypes = {
+  radius: PropTypes.number,
   type: PropTypes.string,
   color: PropTypes.string,
 };
